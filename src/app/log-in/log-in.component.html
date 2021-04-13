@@ -1,1 +1,11 @@
-<p>log-in works!</p>
+
+<form [formGroup]="userLogIn" class="row g-3" (ngSubmit)="onSubmit()">
+  <div class="col-auto">
+    <label for="userName" class="visually-hidden">user</label>
+    <input formControlName="userN"  type="text" class="form-control" id="userName" placeholder="user">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">LogIn</button>
+  </div>
+</form>
+

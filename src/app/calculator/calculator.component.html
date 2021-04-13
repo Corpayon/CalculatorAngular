@@ -1,1 +1,39 @@
-<p>calculator works!</p>
+<mat-grid-list cols="10" rowHeight="100px">
+  <mat-grid-tile
+    [colspan]="4"
+    [rowspan]="5"
+    [style.background]='color:lightblue'
+    >
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="6"
+    [rowspan]="1"
+    [style.background]='color:lightpinke'
+  >
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="6"
+    [rowspan]="1"
+    [style.background]='color:llightgreene'
+  >
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="3"
+    [style.background]='color:l#DDBDF1e'
+  >
+    <li *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]; index as i; first as isFirst">
+      {{i}}. <button *ngIf="isFirst">default</button>
+    </li>
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="3"
+    [style.background]='color:l#DDBDF1'
+  >
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
+
